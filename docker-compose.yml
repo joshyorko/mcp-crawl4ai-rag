@@ -1,0 +1,26 @@
+name: mcp-crawl4ai-rag
+services:
+  app:
+    build: .
+    ports:
+      - "8051:8051"
+    env_file:
+      - .env
+
+    volumes:
+      - .:/app
+ #neo4j:
+ #  image: neo4j:latest
+ #  volumes:
+ #      - ./neo4j/logs:/logs
+ #      - ./neo4j/config:/config
+ #      - ./neo4j/data:/data
+ #      - ./neo4j/plugins:/plugins
+ #  expose:
+ #    - 7473/tcp
+ #    - 7474/tcp
+ #    - 7687/tcp
+ #  environment:
+ #      - NEO4J_AUTH=${NEO4J_AUTH:-"neo4j/your_password"}
+ #  restart: always
+
